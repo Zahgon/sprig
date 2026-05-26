@@ -1,28 +1,12 @@
 package sprig
 
-import (
-	"fmt"
-	"reflect"
-)
-
 // typeIs returns true if the src is the type named in target.
-func typeIs(target string, src interface{}) bool {
-	return target == typeOf(src)
-}
+func typeIs(target string, src interface{}) bool { _ = "STUB: not implemented"; return false }
 
-func typeIsLike(target string, src interface{}) bool {
-	t := typeOf(src)
-	return target == t || "*"+target == t
-}
+func typeIsLike(target string, src interface{}) bool { _ = "STUB: not implemented"; return false }
 
-func typeOf(src interface{}) string {
-	return fmt.Sprintf("%T", src)
-}
+func typeOf(src interface{}) string { _ = "STUB: not implemented"; return "" }
 
-func kindIs(target string, src interface{}) bool {
-	return target == kindOf(src)
-}
+func kindIs(target string, src interface{}) bool { _ = "STUB: not implemented"; return false }
 
-func kindOf(src interface{}) string {
-	return reflect.ValueOf(src).Kind().String()
-}
+func kindOf(src interface{}) string { _ = "STUB: not implemented"; return "" }

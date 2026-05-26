@@ -1,83 +1,51 @@
 package sprig
 
-import (
-	"regexp"
-)
-
-func regexMatch(regex string, s string) bool {
-	match, _ := regexp.MatchString(regex, s)
-	return match
-}
+func regexMatch(regex string, s string) bool { _ = "STUB: not implemented"; return false }
 
 func mustRegexMatch(regex string, s string) (bool, error) {
-	return regexp.MatchString(regex, s)
+	_ = "STUB: not implemented"
+	return false, nil
 }
 
-func regexFindAll(regex string, s string, n int) []string {
-	r := regexp.MustCompile(regex)
-	return r.FindAllString(s, n)
-}
+func regexFindAll(regex string, s string, n int) []string { _ = "STUB: not implemented"; return nil }
 
 func mustRegexFindAll(regex string, s string, n int) ([]string, error) {
-	r, err := regexp.Compile(regex)
-	if err != nil {
-		return []string{}, err
-	}
-	return r.FindAllString(s, n), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func regexFind(regex string, s string) string {
-	r := regexp.MustCompile(regex)
-	return r.FindString(s)
-}
+func regexFind(regex string, s string) string { _ = "STUB: not implemented"; return "" }
 
 func mustRegexFind(regex string, s string) (string, error) {
-	r, err := regexp.Compile(regex)
-	if err != nil {
-		return "", err
-	}
-	return r.FindString(s), nil
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 func regexReplaceAll(regex string, s string, repl string) string {
-	r := regexp.MustCompile(regex)
-	return r.ReplaceAllString(s, repl)
+	_ = "STUB: not implemented"
+	return ""
 }
 
 func mustRegexReplaceAll(regex string, s string, repl string) (string, error) {
-	r, err := regexp.Compile(regex)
-	if err != nil {
-		return "", err
-	}
-	return r.ReplaceAllString(s, repl), nil
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
 func regexReplaceAllLiteral(regex string, s string, repl string) string {
-	r := regexp.MustCompile(regex)
-	return r.ReplaceAllLiteralString(s, repl)
+	_ = "STUB: not implemented"
+	return ""
 }
 
 func mustRegexReplaceAllLiteral(regex string, s string, repl string) (string, error) {
-	r, err := regexp.Compile(regex)
-	if err != nil {
-		return "", err
-	}
-	return r.ReplaceAllLiteralString(s, repl), nil
+	_ = "STUB: not implemented"
+	return "", nil
 }
 
-func regexSplit(regex string, s string, n int) []string {
-	r := regexp.MustCompile(regex)
-	return r.Split(s, n)
-}
+func regexSplit(regex string, s string, n int) []string { _ = "STUB: not implemented"; return nil }
 
 func mustRegexSplit(regex string, s string, n int) ([]string, error) {
-	r, err := regexp.Compile(regex)
-	if err != nil {
-		return []string{}, err
-	}
-	return r.Split(s, n), nil
+	_ = "STUB: not implemented"
+	return nil, nil
 }
 
-func regexQuoteMeta(s string) string {
-	return regexp.QuoteMeta(s)
-}
+func regexQuoteMeta(s string) string { _ = "STUB: not implemented"; return "" }

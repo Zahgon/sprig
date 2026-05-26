@@ -24,45 +24,32 @@ import (
 //
 //	tpl := template.New("foo").Funcs(sprig.FuncMap()))
 func FuncMap() template.FuncMap {
-	return HtmlFuncMap()
+	_ = "STUB: not implemented"
+	return *
+
+	// HermeticTxtFuncMap returns a 'text/template'.FuncMap with only repeatable functions.
+	new(template.FuncMap)
 }
 
-// HermeticTxtFuncMap returns a 'text/template'.FuncMap with only repeatable functions.
 func HermeticTxtFuncMap() ttemplate.FuncMap {
-	r := TxtFuncMap()
-	for _, name := range nonhermeticFunctions {
-		delete(r, name)
-	}
-	return r
+	_ = "STUB: not implemented"
+	return *new(ttemplate.FuncMap)
 }
 
 // HermeticHtmlFuncMap returns an 'html/template'.Funcmap with only repeatable functions.
 func HermeticHtmlFuncMap() template.FuncMap {
-	r := HtmlFuncMap()
-	for _, name := range nonhermeticFunctions {
-		delete(r, name)
-	}
-	return r
+	_ = "STUB: not implemented"
+	return *new(template.FuncMap)
 }
 
 // TxtFuncMap returns a 'text/template'.FuncMap
-func TxtFuncMap() ttemplate.FuncMap {
-	return ttemplate.FuncMap(GenericFuncMap())
-}
+func TxtFuncMap() ttemplate.FuncMap { _ = "STUB: not implemented"; return *new(ttemplate.FuncMap) }
 
 // HtmlFuncMap returns an 'html/template'.Funcmap
-func HtmlFuncMap() template.FuncMap {
-	return template.FuncMap(GenericFuncMap())
-}
+func HtmlFuncMap() template.FuncMap { _ = "STUB: not implemented"; return *new(template.FuncMap) }
 
 // GenericFuncMap returns a copy of the basic function map as a map[string]interface{}.
-func GenericFuncMap() map[string]interface{} {
-	gfm := make(map[string]interface{}, len(genericMap))
-	for k, v := range genericMap {
-		gfm[k] = v
-	}
-	return gfm
-}
+func GenericFuncMap() map[string]interface{} { _ = "STUB: not implemented"; return nil }
 
 // These functions are not guaranteed to evaluate to the same result for given input, because they
 // refer to the environment or global state.
